@@ -1,0 +1,198 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<body ng-cloak="">
+    <title>Young Dreams</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- banner-body -->
+    <div class="banner-body">
+        <div class="container">
+            <!-- header -->
+            <div class="header">
+                <div class="header-nav">
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#/"><span>Y</span>oung Dreams</a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="hvr-bounce-to-bottom" id="home"><a href="#">Home</a></li>
+                                <li class="hvr-bounce-to-bottom" id="about"><a href="#about">About</a></li>
+                                <li class="hvr-bounce-to-bottom" id="blog"><a href="#blog">Blog</a></li>
+                            </ul>
+                            <div class="sign-in" id="signin" ng-controller="sign">
+                                <ul>
+                                    <li><a href="#{{firstLink}}" ng-click="this[method](param)">{{first}}</a>/</li>
+                                    <li><a href="#{{secondLink}}">{{second}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </nav>
+                </div>
+                <!-- //header -->
+                <!-- header-bottom -->
+                <!-- start-smoth-scrolling -->
+                <style type="text/css">
+                .sk-cube-grid {
+                    width: 40px;
+                    height: 40px;
+                    margin: 100px auto;
+                }
+                
+                .sk-cube-grid .sk-cube {
+                    width: 33%;
+                    height: 33%;
+                    background-color: #c34c21;
+                    float: left;
+                    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+                    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+                }
+                
+                .sk-cube-grid .sk-cube1 {
+                    -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+                }
+                
+                .sk-cube-grid .sk-cube2 {
+                    -webkit-animation-delay: 0.3s;
+                    animation-delay: 0.3s;
+                }
+                
+                .sk-cube-grid .sk-cube3 {
+                    -webkit-animation-delay: 0.4s;
+                    animation-delay: 0.4s;
+                }
+                
+                .sk-cube-grid .sk-cube4 {
+                    -webkit-animation-delay: 0.1s;
+                    animation-delay: 0.1s;
+                }
+                
+                .sk-cube-grid .sk-cube5 {
+                    -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+                }
+                
+                .sk-cube-grid .sk-cube6 {
+                    -webkit-animation-delay: 0.3s;
+                    animation-delay: 0.3s;
+                }
+                
+                .sk-cube-grid .sk-cube7 {
+                    -webkit-animation-delay: 0s;
+                    animation-delay: 0s;
+                }
+                
+                .sk-cube-grid .sk-cube8 {
+                    -webkit-animation-delay: 0.1s;
+                    animation-delay: 0.1s;
+                }
+                
+                .sk-cube-grid .sk-cube9 {
+                    -webkit-animation-delay: 0.2s;
+                    animation-delay: 0.2s;
+                }
+                
+                @-webkit-keyframes sk-cubeGridScaleDelay {
+                    0%,
+                    70%,
+                    100% {
+                        -webkit-transform: scale3D(1, 1, 1);
+                        transform: scale3D(1, 1, 1);
+                    }
+                    35% {
+                        -webkit-transform: scale3D(0, 0, 1);
+                        transform: scale3D(0, 0, 1);
+                    }
+                }
+                
+                @keyframes sk-cubeGridScaleDelay {
+                    0%,
+                    70%,
+                    100% {
+                        -webkit-transform: scale3D(1, 1, 1);
+                        transform: scale3D(1, 1, 1);
+                    }
+                    35% {
+                        -webkit-transform: scale3D(0, 0, 1);
+                        transform: scale3D(0, 0, 1);
+                    }
+                }
+                </style>
+                <!--spin kit-->
+                <div class="header-bottom">
+                    <div ng-view="" id="ng-view"></div>
+                </div>
+                <!-- //banner-bottom -->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p>© 2015 Quickly. All rights reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
+                    </div>
+                </div>
+                <!-- //footer-->
+                <!-- Libraries -->
+                <!-- js -->
+                <script src="js/jquery-1.11.1.min.js"></script>
+                <script src="js/responsiveslides.min.js"></script>
+                <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+                <!-- //js -->
+                <script type="application/x-javascript">
+                addEventListener("load", function() {
+                    setTimeout(hideURLbar, 0);
+                }, false);
+
+                function hideURLbar() {
+                    window.scrollTo(0, 1);
+                }
+                </script>
+                <!-- //for-mobile-apps -->
+                <script src="js/angular.min.js"></script>
+                <script src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+                <script src="js/angular-route.min.js"></script>
+                <script src="js/angular-animate.min.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+                <script type="text/javascript" src="js/angular-sanitize.min.js"></script>
+                <script type="text/javascript" src="js/ng-ckeditor.js"></script>
+                <!-- <script type="text/javascript" src="js/angular-re-captcha.js"></script>
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                 --><!-- AngularFire -->
+                <script type="text/javascript" src="js/angularfire.min.js"></script>
+                <!-- <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script> -->
+                <!-- AngularJS custom codes -->
+                <script src="app/app.js"></script>
+                <script src="app/data.js"></script>
+                <script src="app/directives.js"></script>
+                <script src="app/productsCtrl.js"></script>
+                <!-- Some Bootstrap Helper Libraries -->
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/underscore.min.js"></script>
+                <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+                <script src="js/ie10-viewport-bug-workaround.js"></script>
+                <!-- //Libraries -->
+</body>
+
+</html>

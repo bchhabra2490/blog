@@ -1,0 +1,102 @@
+<!-- single -->
+<div class="single-page-artical">
+    <div class="artical-content">
+        <div class="sk-cube-grid" ng-hide="data">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+        <h3>{{data.title}}</h3>
+        <h4><b>{{data.subTitle}}</b></h4>
+        <br>
+        <img class="img-responsive" src="images/1_1.jpg" alt=" " />
+        <!-- <div ng-bind-html="Trust(data.title)"></div> -->
+        <h5><b>Introduction</b></h5>
+        <p>When I was a kid (now I’m of 20), people used to ask me “What do you want to become when you will grow up?”. I used to answer vehemently - “I want to become a pilot.” - maybe because it was not an ordinary deal to fly and maybe it sounded cool. And sometimes, I wanted to become a footballer or an astronaut. There was no end to my aspirations. I used to think that I can become anyone (though, now, I will end up being a Software Engineer). I am fortunate enough that I, born in a free country like India and to the parents who have always provided me with more than I ever deserved. I grew up in an environment in which I was allowed to think freely and I presume that most of you also enjoyed the same grandeur.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive col-sm-6 col-md-6 col-lg-6" src="images/1_2.jpg" alt=" " />
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive col-sm-6 col-md-6 col-lg-6" src="images/1_3.jpg" alt=" " />
+            </div>
+        </div>
+        <p>
+            But when I started to understand this world more, I came to know that there is a nasty side of this utopia. I slowly came to know those children who don’t want to become a pilot or an astronaut or a footballer, children who were never asked: “What do you want to become when you will grow up?”, children who instead of answering the question proudly, asked “If I will ever grow up?”. These children live (or maybe dead by now) in the countries like Syria, Pakistan, Afghanistan and many theocracies of middle-east. The countries where the mind of a child is full of fear. They are afraid of the blue sky. They are afraid of the airplanes. They are afraid of life.</p>
+        <h4><b>Genocide in Syria</b></h4>
+        <p>I was sifting through my Facebook wall when I started seeing the posts on Aleppo crisis (with #Aleppo). Aleppo is a city located in Northwest Syria near the Turkish border where</p>
+        <img class="img-responsive" src="images/1_5.jpg" alt=" " />
+        <p>currently a battle is going on between the Bashar Al-Assad’s (current president of Syria) regime and sundry anti-government rebel forces. In the midst of the battle, civilians are suffering the most. Lack of food and medicine and continuous bombing by the Assad’s regime, who is backed by Russian and Iranian forces, made them leave their home and take refuge in other countries of the world. The lust of power made the innocents suffered the most. The civilians are forced to leave their homes as they are turned to rubble. The children are made to go through a lot of hardships.</p>
+        <p>There is saying that goes by - “You cannot appreciate the good if you haven’t experienced the bad”. The opposite of it is also true. If nothing good has happened in one’s life, one lowers his/her bar and start considering bad as good.</p>
+        <img class="img-responsive" src="images/1_4.jpg" alt=" " />
+        <p>The children who should be stowing their school bags with green colored books and blue colored pens are wrapping up their belongings to leave for safer refugee camps. This routine has entrenched so deeply in them as they never had the taste of life enjoyed by most of the children of the free world. Parents are pleading for their children’s life in a hope that</p>
+        <img class="img-responsive" src="images/1_6.jpg" alt=" " />
+        <p>the world will show some sympathy towards them, the world which has listened to the screams of the Italians, Americans and the other victims of terror will also listen to them and will save the rightful owners of this world from the massacre.</p>
+    </div>
+    <div class="artical-links">
+        <ul>
+            <style>
+                .voted{
+                    color:#C34C21;
+                }
+            </style>
+            <li><small> </small><span>{{data.date | date:'mediumDate'}}</span></li>
+            <li><a href=""><small class="admin"> </small><span>{{data.by}}</span></a></li>
+            <li><a href="" label="Up Vote" ng-click="up()"><span class="glyphicon glyphicon-thumbs-up" ng-class="{'voted': (data.votes[user]['up'])}" id="up">{{data.up}}</span></a></li>
+            <li><a href="" label="Down Vote" ng-click="down()"><span class="glyphicon glyphicon-thumbs-down" ng-class="{'voted': (data.votes[user]['down'])}" id="down">{{data.down}}</span></a></li>
+            <li><a href=""><small class="no"> </small><span>{{data.totalComments}} comments</span></a></li>
+            <!-- <li><a href="#"><small class="posts"> </small><span>View posts</span></a></li>
+            <li><a href="#"><small class="link"> </small><span>permalink</span></a></li> -->
+        </ul>
+    </div>
+    <div class="comment-grid-top">
+        <h3>Responses</h3>
+        <div class="sk-cube-grid" ng-hide="data.totalComments">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+        <div class="comments-top-top" ng-repeat="comment in data.comments" ng-show="data.totalComments">
+            <div class="top-comment-left">
+                <a href="#"><img class="img-responsive" src="images/co.png" alt=""></a>
+            </div>
+            <div class="top-comment-right">
+                <ul>
+                    <li><span class="left-at"><a href="#">{{comment.userName}}</a></span></li>
+                    <li><span class="right-at">{{comment.date | date:'mediumDate'}}</span></li>
+                </ul>
+                <p>{{comment.comment}}</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="artical-commentbox" ng-show="data">
+        <h3>leave a comment</h3>
+        <div class="col-lg-6 col-md-6" style="padding-top: 10px">
+            <form ng-submit="createNewComment()">
+                <div class="input-group">
+                    <span class="glyphicon glyphicon-comment input-group-addon" id="basic-addon1" style="color:#C34C21;background-color: white"></span>
+                    <input type="text" class="form-control" placeholder="Comment..." ng-model="readerComment" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit""><span class="glyphicon glyphicon-send" style="color:#C34C21"></span></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- single -->
+</div>
+</div>
